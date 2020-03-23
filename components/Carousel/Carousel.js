@@ -7,6 +7,7 @@
     6. Have fun!
 */
 
+
 /* HTML:
   <div class="carousel">
     <div class="left-button"> < </div>
@@ -17,3 +18,65 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+let newLocal = document.querySelector('.carousel-container');
+
+function Container() {
+  const carousel = document.createElement('div');
+  const leftButton = document.createElement('div');
+  const mountains = document.createElement('img');
+  const computer = document.createElement('img');
+  const trees = document.createElement('img');
+  const turntable = document.createElement('img');
+  const rightButton = document.createElement('div');
+
+  carousel.classList.add('carousel');
+  leftButton.classList.add('left-button');
+  rightButton.classList.add('right-button');
+  mountains.classList.add('img')
+  computer.classList.add('img')
+  trees.classList.add('img')
+  turntable.classList.add('img')
+
+  mountains.src = "../assets/carousel/mountains.jpeg";
+  computer.src = "../assets/carousel/computer.jpeg";
+  trees.src = "../assets/carousel/trees.jpeg";
+  turntable.src= "../assets/carousel/turntable.jpeg";
+  leftButton.textContent = "\u2190";
+  rightButton.textContent = "\u2192";
+
+  carousel.appendChild(leftButton);
+  carousel.appendChild(mountains);
+  carousel.appendChild(computer);
+  carousel.appendChild(trees);
+  carousel.appendChild(turntable);
+  carousel.appendChild(rightButton);
+
+  return carousel;
+
+}
+
+
+const newCarousel = Container(carousel);
+newLocal.appendChild(newCarousel);
+
+
+var slideIndex = 1;
+	showDivs(slideIndex);
+	
+	function plusDivs(n) {
+	  showDivs(slideIndex += n, carousel);
+	}
+	
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("img");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";  
+	  }
+	  x[slideIndex-1].style.display = "block";  
+  }
+  
+  

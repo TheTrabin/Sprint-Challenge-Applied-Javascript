@@ -30,13 +30,20 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 Document Object Module.
+It allows programmers generic access to add, delete, and manipulate of all styles, attributes, and elements in a document, including HTML.
+
 2. What is an event?
+A User Interaction.
+
 
 3. What is an event listener?
+Event Listeners are what we look for to trigger an event. It takes a target (something to look for), and then what to callback upon triggering. An example is a Click event. It listens for a Click trigger on the element, and then it returns the specified action.
 
 4. Why would we convert a NodeList into an Array?
+It's easier to manipulate an Array with Javascript, such as Iterate over, filter, map, etc. Can't be done with a NodeList, but It can with an Array.
 
 5. What is a component?
+A Reusable combination of HTML, CSS, and Javascript to use in a website or application.
 
 ### Git Set up
 
